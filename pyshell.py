@@ -3,34 +3,38 @@ import os.path
 import random
 content = ""
 
+user_name = os.getlogin()
+
+desktop=f"C:\\Users\\{user_name}\\Desktop"
+downloads=f"C:\\Users\\{user_name}\\Downloads"
+documents=f"C:\\Users\\{user_name}\\Documents"
+pictures=f"C:\\Users\\{user_name}\\Pictures"
+
 settings ={
 
-    "userName": "Daniel",
+    "userName": "",
     "defaultBrowser": "firefox",
-    "process": ["brave", "OUTLOOK", "firefox"],
+    "process": ["brave", "OUTLOOK", "firefox", "msdege"],
     "automaticEmptyCdParam": "on"
 
 }
 
-folders = {
-    "userName": "Daniel",
-    "c": "C:\\",
-    "d": "D:\\",
-    "i": "I:\\",
-    "desktop": "C:\\Users\\Daniel\\Desktop",
-    "downloads": "C:\\Users\\Daniel\\Downloads",
-    "documents": "C:\\Users\\Daniel\\Documents",
-    "pictures": "C:\\Users\\Daniel\\Pictures",
-    "sales": "I:\\Comercial\\02-Ventas\\01- Proyectos",
-    "quotations": "I:\\Comercial\\01-Presupuestos\\01-Proyectos\\01-En Curso",
-    "standards": "I:\\Documentacion Tecnica\\General\\SEGURIDAD\\01.NORMAS",
-    "packinglist": "I:\\Comercial\\11-Packing List",
-    "plates": "I:\\Documentacion Tecnica\\General\\Placa CE",
-    "software": "I:\\Documentacion Tecnica\\Programas y software",
-    "ppe": "I:\\Prevencion Riesgos Laborales"
+settings["userName"]=user_name
+
+folders = { 
+
+"c":"C:\\",
+"d":"D:\\",
+"desktop":"",
+"documents":"",
+"downloads":"",
+"pictures":""
 }
 
-user_name = settings["userName"]
+folders["desktop"]=desktop
+folders["documents"]=documents
+folders["downloads"]=downloads
+folders["downloads"]=pictures
 
 # here list var for here functions
 here_var =[]
